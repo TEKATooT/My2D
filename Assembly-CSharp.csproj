@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\BestScript.cs" />
+    <Compile Include="Assets\Script\PlayerControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
