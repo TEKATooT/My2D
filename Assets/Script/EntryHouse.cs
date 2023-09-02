@@ -1,26 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-[RequireComponent(typeof(AlarmSystem))]
+using UnityEngine.Events;
 
 public class EntryHouse : MonoBehaviour
 {
-    private AlarmSystem _alarmSystem;
-
-    private void Awake()
-    {
-        _alarmSystem = GetComponent<AlarmSystem>();
-    }
+    [SerializeField] private UnityEvent _entry;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent<Player>(out Player player))
-            _alarmSystem.On();
+            _entry.Invoke();
     }
 
-    private void OnTriggerExit2D()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        _alarmSystem.Off();
+        if (collision.TryGetComponent<Player>(out Player player))
+            _entry.Invoke();
     }
 }

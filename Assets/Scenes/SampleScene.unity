@@ -345,6 +345,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178cf9073992677479f7faa60429691c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _entry:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 456078481}
+        m_TargetAssemblyTypeName: Alarm, Assembly-CSharp
+        m_MethodName: Control
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &456078481
 MonoBehaviour:
   m_ObjectHideFlags: 0
