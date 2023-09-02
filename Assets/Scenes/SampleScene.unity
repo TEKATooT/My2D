@@ -135,7 +135,8 @@ GameObject:
   - component: {fileID: 456078473}
   - component: {fileID: 456078479}
   - component: {fileID: 456078476}
-  - component: {fileID: 456078478}
+  - component: {fileID: 456078480}
+  - component: {fileID: 456078481}
   m_Layer: 0
   m_Name: House
   m_TagString: Untagged
@@ -306,18 +307,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &456078478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456078472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29097f5ecc0043147b4879c7f5589fd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &456078479
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -344,6 +333,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.62, y: 4.88}
   m_EdgeRadius: 0
+--- !u!114 &456078480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456078472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 178cf9073992677479f7faa60429691c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &456078481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456078472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9efb3031ae65dc148aff64618e5806de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

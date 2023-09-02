@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     private int _walk = Animator.StringToHash("Walk");
     private int _run = Animator.StringToHash("Run");
 
-    void Start()
+    private void Start()
     {
         _rend = _player.GetComponent<SpriteRenderer>();
         _anim = _player.GetComponent<Animator>();
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
         _body = _player.GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
