@@ -4,8 +4,7 @@ using UnityEngine;
 public class HouseEnter : MonoBehaviour
 {
     private AudioSource _alarm;
-    private SpriteRenderer _home;
-    private Color _defaultColor;
+    private Coroutine VolumeChanger;
 
     private float _alarmVolumeMin = 0f;
     private float _alarmVolumeMax = 1f;
@@ -15,40 +14,41 @@ public class HouseEnter : MonoBehaviour
     void Start()
     {
         _alarm = GetComponent<AudioSource>();
-        _home = GetComponent<SpriteRenderer>();
-
-        _defaultColor = _home.color;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        StopAllCoroutines();
-
         if (collision.TryGetComponent<Player>(out Player player))
         {
             _alarm.Play();
             _alarm.volume = 0.0f;
-            _home.color = Color.red;
 
-            StartCoroutine(VolumeChange(_alarmVolumeMax, _alarmVolumeUpStep));
+            CoroutinesControler();
+            VolumeChanger = StartCoroutine(VolumeChange(_alarmVolumeMax, _alarmVolumeUpStep));
         }
     }
 
     private void OnTriggerExit2D()
     {
-        StopAllCoroutines();
-        _home.color = _defaultColor;
-
-        StartCoroutine(VolumeChange(_alarmVolumeMin, _alarmVolumeDownStep));
+        CoroutinesControler();
+        VolumeChanger = StartCoroutine(VolumeChange(_alarmVolumeMin, _alarmVolumeDownStep));
     }
 
-    private IEnumerator VolumeChange(float needVolume, float VolumeStep)
+    private void CoroutinesControler()
+    {
+        if (VolumeChanger != null)
+        {
+            StopCoroutine(VolumeChanger);
+        }
+    }
+
+    private IEnumerator VolumeChange(float needVolume, float volumeStep)
     {
         var waitForOneSeconds = new WaitForSeconds(1f);
 
         while (_alarm.volume != needVolume)
         {
-            _alarm.volume += VolumeStep;
+            _alarm.volume += volumeStep;
             Debug.Log(_alarm.volume);
 
             yield return waitForOneSeconds;

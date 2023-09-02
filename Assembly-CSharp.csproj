@@ -58,7 +58,6 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Player.cs" />
     <Compile Include="Assets\Script\HouseEnter.cs" />
-    <Compile Include="Assets\Script\VolumeChanger.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
