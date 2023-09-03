@@ -7,57 +7,59 @@ using UnityEngine;
 
 public class Alarm : MonoBehaviour
 {
-    private AudioSource _alarm;
+    private AudioSource _signal;
     private Coroutine _volumeChanger;
 
-    private float _alarmVolumeMin = 0f;
-    private float _alarmVolumeMax = 1f;
-    private float _alarmVolumeUpStep = 0.1f;
-    private float _alarmVolumeDownStep = -0.1f;
+    [SerializeField] private float _waitSeconds;
+
+    private float _volumeMin = 0f;
+    private float _volumeMax = 1f;
+    private float _volumeUpStep = 0.01f;
+    private float _volumeDownStep = -0.01f;
 
     private bool _isWork = false;
 
     private void Start()
     {
-        _alarm = GetComponent<AudioSource>();
+        _signal = GetComponent<AudioSource>();
     }
 
     private IEnumerator VolumeChange(float needVolume, float volumeStep)
     {
-        var waitForOneSeconds = new WaitForSeconds(1f);
+        var waitForOneSeconds = new WaitForSeconds(_waitSeconds);
 
-        while (_alarm.volume != needVolume)
+        while (_signal.volume != needVolume)
         {
-            _alarm.volume += volumeStep;
+            _signal.volume += volumeStep;
 
             yield return waitForOneSeconds;
         }
     }
 
-    public void Control()
+    public void SignalControl()
     {
         if (_isWork == false)
         {
-            CoroutinesControler();
+            ControlCoroutines();
 
-            _alarm.Play();
-            _alarm.volume = 0.0f;
+            _signal.Play();
+            _signal.volume = 0.0f;
 
-            _volumeChanger = StartCoroutine(VolumeChange(_alarmVolumeMax, _alarmVolumeUpStep));
+            _volumeChanger = StartCoroutine(VolumeChange(_volumeMax, _volumeUpStep));
 
             _isWork = true;
         }
         else
         {
-            CoroutinesControler();
+            ControlCoroutines();
 
-            _volumeChanger = StartCoroutine(VolumeChange(_alarmVolumeMin, _alarmVolumeDownStep));
+            _volumeChanger = StartCoroutine(VolumeChange(_volumeMin, _volumeDownStep));
 
             _isWork = false;
         }
     }
 
-    private void CoroutinesControler()
+    private void ControlCoroutines()
     {
         if (_volumeChanger != null)
         {

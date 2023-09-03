@@ -350,7 +350,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 456078481}
         m_TargetAssemblyTypeName: Alarm, Assembly-CSharp
-        m_MethodName: Control
+        m_MethodName: SignalControl
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -372,6 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9efb3031ae65dc148aff64618e5806de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _waitSeconds: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,30 +1264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4ad6ae3070498b4491066aa6c36249c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1827952321}
---- !u!1 &1874960230 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4996053663595674945, guid: 975ca2132e67a504ebe5695b67355fc6, type: 3}
-  m_PrefabInstance: {fileID: 4996053664090083033}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1874960242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1874960230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 097b551f2844b054290f18a39bf892e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Solvers:
-  - {fileID: 0}
-  m_Weight: 1
-  m_SolverEditorData:
-  - color: {r: 0, g: 1, b: 0, a: 1}
-    showGizmo: 1
+  _gameObject: {fileID: 1827952321}
 --- !u!1001 &441772234834229124
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,17 +2,15 @@ using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(SpriteRenderer))]
-[RequireComponent(typeof(Transform))]
 [RequireComponent(typeof(Rigidbody2D))]
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private GameObject _player;
+    [SerializeField] private GameObject _gameObject;
 
-    private Animator _anim;
-    private SpriteRenderer _rend;
-    private Transform _trans;
-    private Rigidbody2D _body;
+    private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
+    private Rigidbody2D _rigidbody2D;
 
     private float _speed = 1.0f;
     private float _backSpeed = -1.0f;
@@ -25,40 +23,39 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        _rend = _player.GetComponent<SpriteRenderer>();
-        _anim = _player.GetComponent<Animator>();
-        _trans = _player.GetComponent<Transform>();
-        _body = _player.GetComponent<Rigidbody2D>();
+        _spriteRenderer = _gameObject.GetComponent<SpriteRenderer>();
+        _animator = _gameObject.GetComponent<Animator>();
+        _rigidbody2D = _gameObject.GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            _anim.SetTrigger(_shot);
+            _animator.SetTrigger(_shot);
         }
         
         if (Input.GetKey(KeyCode.D))
         {
-            _rend.flipX = false;
+            _spriteRenderer.flipX = false;
 
-            _body.velocity = _trans.right * _speed;
+            _rigidbody2D.velocity = _gameObject.transform.right * _speed;
 
-            _anim.SetTrigger(_walk);
+            _animator.SetTrigger(_walk);
         }
         
         if (Input.GetKey(KeyCode.A))
         {
-            _rend.flipX = true;
+            _spriteRenderer.flipX = true;
 
-            _body.velocity = _trans.right * _backSpeed;
+            _rigidbody2D.velocity = _gameObject.transform.right * _backSpeed;
 
-            _anim.SetTrigger(_walk);
+            _animator.SetTrigger(_walk);
         }
         
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            _anim.SetInteger(_run, 2);
+            _animator.SetInteger(_run, 2);
 
             if (_speed <= _defaultSpeed)
             {
@@ -69,7 +66,7 @@ public class Player : MonoBehaviour
      
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            _anim.SetInteger(_run, 0);
+            _animator.SetInteger(_run, 0);
             _speed = _defaultSpeed;
             _backSpeed = _defaultBackSpeed;
         }
@@ -77,6 +74,6 @@ public class Player : MonoBehaviour
 
     private void OnMouseDown()
     {
-        _anim.SetTrigger(_shot);
+        _animator.SetTrigger(_shot);
     }
 }
