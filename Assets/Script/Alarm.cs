@@ -36,30 +36,38 @@ public class Alarm : MonoBehaviour
         }
     }
 
-    public void SignalControl()
+    public void SignalControl(bool _isWork)
     {
-        if (_isWork == false)
+        if (_isWork == true)
         {
-            ControlCoroutines();
-
-            _signal.Play();
-            _signal.volume = 0.0f;
-
-            _volumeChanger = StartCoroutine(VolumeChange(_volumeMax, _volumeUpStep));
-
-            _isWork = true;
+            SignalOn();
         }
         else
         {
-            ControlCoroutines();
-
-            _volumeChanger = StartCoroutine(VolumeChange(_volumeMin, _volumeDownStep));
-
-            _isWork = false;
+            SignalOff();
         }
     }
 
-    private void ControlCoroutines()
+    private void SignalOn()
+    {
+        StopSignal();
+
+        _signal.Play();
+        _signal.volume = 0.0f;
+
+        _volumeChanger = StartCoroutine(VolumeChange(_volumeMax, _volumeUpStep));
+    }
+
+    private void SignalOff()
+    {
+        StopSignal();
+
+        _volumeChanger = StartCoroutine(VolumeChange(_volumeMin, _volumeDownStep));
+
+        _isWork = false;
+    }
+
+    private void StopSignal()
     {
         if (_volumeChanger != null)
         {
