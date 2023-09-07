@@ -17,8 +17,6 @@ public class Alarm : MonoBehaviour
     private float _volumeUpStep = 0.01f;
     private float _volumeDownStep = -0.01f;
 
-    private bool _isWork = false;
-
     private void Start()
     {
         _signal = GetComponent<AudioSource>();
@@ -63,8 +61,6 @@ public class Alarm : MonoBehaviour
         StopSignal();
 
         _volumeChanger = StartCoroutine(VolumeChange(_volumeMin, _volumeDownStep));
-
-        _isWork = false;
     }
 
     private void StopSignal()
