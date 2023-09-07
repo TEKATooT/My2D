@@ -60,6 +60,7 @@
     <Compile Include="Assets\Script\EntryHouse.cs" />
     <Compile Include="Assets\Script\Alarm.cs" />
     <Compile Include="Assets\Script\EnemуRespawns.cs" />
+    <Compile Include="Assets\Script\Ball.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
