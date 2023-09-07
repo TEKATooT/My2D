@@ -56,11 +56,11 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\Player.cs" />
-    <Compile Include="Assets\Script\EntryHouse.cs" />
-    <Compile Include="Assets\Script\Alarm.cs" />
-    <Compile Include="Assets\Script\EnemуRespawns.cs" />
+    <Compile Include="Assets\Other\Script\Player.cs" />
     <Compile Include="Assets\Script\Ball.cs" />
+    <Compile Include="Assets\Other\Script\EntryHouse.cs" />
+    <Compile Include="Assets\Other\Script\Alarm.cs" />
+    <Compile Include="Assets\Script\Spawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

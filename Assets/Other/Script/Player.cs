@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Ball _ball;
+    [SerializeField] private Rigidbody2D _player;
 
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
@@ -23,9 +23,9 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        _spriteRenderer = _ball.GetComponent<SpriteRenderer>();
-        _animator = _ball.GetComponent<Animator>();
-        _rigidbody2D = _ball.GetComponent<Rigidbody2D>();
+        _spriteRenderer = _player.GetComponent<SpriteRenderer>();
+        _animator = _player.GetComponent<Animator>();
+        _rigidbody2D = _player.GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
         {
             _spriteRenderer.flipX = false;
 
-            _rigidbody2D.velocity = _ball.transform.right * _speed;
+            _rigidbody2D.velocity = _player.transform.right * _speed;
 
             _animator.SetTrigger(_walk);
         }
@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
         {
             _spriteRenderer.flipX = true;
 
-            _rigidbody2D.velocity = _ball.transform.right * _backSpeed;
+            _rigidbody2D.velocity = _player.transform.right * _backSpeed;
 
             _animator.SetTrigger(_walk);
         }

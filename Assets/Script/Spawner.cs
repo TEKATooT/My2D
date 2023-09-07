@@ -1,20 +1,20 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
-[RequireComponent(typeof(Transform))]
-[RequireComponent(typeof(BoxCollider2D))]
-
-public class EnemуRespawns : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     [SerializeField] private Transform _respawns;
     [SerializeField] private Transform _destinationPoint;
-    [SerializeField] private GameObject _ball;
+    [SerializeField] private Ball _ball;
+
+    [SerializeField] private UnityEvent _newBall;
 
     private Transform[] _respawnsPoints;
-    private GameObject _newBall;
+    private Ball _createdBall;
 
     private float _respawnsTime = 2f;
-    private float _ballSpeed = 0.1f;
+    //private float _ballSpeed = 0.1f;
 
     private int _minRandomPosition = 0;
     private int _maxRandomPosition;
@@ -35,7 +35,7 @@ public class EnemуRespawns : MonoBehaviour
 
     private void Update()
     {
-        _newBall.transform.position = Vector2.MoveTowards(_newBall.transform.position, _destinationPoint.transform.position, _ballSpeed);
+        //_createdBall.transform.position = Vector2.MoveTowards(_createdBall.transform.position, _destinationPoint.transform.position, _ballSpeed);
     }
 
     private IEnumerator RespawnsTime()
@@ -46,7 +46,9 @@ public class EnemуRespawns : MonoBehaviour
         {
             int respawnPoint = Random.Range(_minRandomPosition, _maxRandomPosition);
 
-            _newBall = Instantiate(_ball, _respawnsPoints[respawnPoint].position, Quaternion.identity);
+            _createdBall = Instantiate(_ball, _respawnsPoints[respawnPoint].position, Quaternion.identity);
+
+            //_newBall.Invoke();
 
             yield return waitForSeconds;
         }
