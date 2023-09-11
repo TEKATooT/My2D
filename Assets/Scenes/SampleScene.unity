@@ -1484,7 +1484,7 @@ GameObject:
   - component: {fileID: 1575668461}
   - component: {fileID: 1575668464}
   m_Layer: 0
-  m_Name: EnemyRespawns
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1502,24 +1502,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b57beff92c0a0734085829860a0197f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _respawns: {fileID: 1575668462}
-  _destinationPoint: {fileID: 519420032}
   _ball: {fileID: -7927457077758656562, guid: 9bcb1ac24b7629f42980b8ffd8bd943a, type: 3}
-  _newBall:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -7927457077758656562, guid: 9bcb1ac24b7629f42980b8ffd8bd943a, type: 3}
-        m_TargetAssemblyTypeName: Ball, Assembly-CSharp
-        m_MethodName: DirectionToGo
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: -7927457077758656562, guid: 9bcb1ac24b7629f42980b8ffd8bd943a, type: 3}
-          m_ObjectArgumentAssemblyTypeName: Ball, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  _respawns: {fileID: 1575668462}
 --- !u!4 &1575668462
 Transform:
   m_ObjectHideFlags: 0
@@ -1580,6 +1564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85fb006ab21c299448fc191b9efc2d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ballSpeed: 0
 --- !u!1 &1827952321 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9160502559778208295, guid: f5fb03238ce086f41bcc78ce2a320abc, type: 3}
@@ -1820,7 +1805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4996053663595674945, guid: 975ca2132e67a504ebe5695b67355fc6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4996053663595674947, guid: 975ca2132e67a504ebe5695b67355fc6, type: 3}
       propertyPath: m_RootOrder

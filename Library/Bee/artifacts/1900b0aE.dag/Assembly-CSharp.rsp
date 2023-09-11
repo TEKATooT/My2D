@@ -371,6 +371,7 @@
 "Assets/Other/Script/EntryHouse.cs"
 "Assets/Other/Script/Player.cs"
 "Assets/Script/Ball.cs"
+"Assets/Script/BlackHole.cs"
 "Assets/Script/Spawner.cs"
 -langversion:9.0
 

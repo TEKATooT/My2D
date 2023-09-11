@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(SpriteRenderer))]
@@ -23,8 +24,8 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        _spriteRenderer = _player.GetComponent<SpriteRenderer>();
         _animator = _player.GetComponent<Animator>();
+        _spriteRenderer = _player.GetComponent<SpriteRenderer>();
         _rigidbody2D = _player.GetComponent<Rigidbody2D>();
     }
 
