@@ -1,6 +1,5 @@
+using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
-using static UnityEngine.GraphicsBuffer;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(SpriteRenderer))]
@@ -13,6 +12,9 @@ public class Player : MonoBehaviour
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _rigidbody2D;
+
+    private int _idleSpeed = 0;
+    private int _runSpeed = 2;
 
     private float _speed = 1.0f;
     private float _jumpPower = 5.0f;
@@ -34,6 +36,11 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        Moving();
+    }
+
+    private void Moving()
+    {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _animator.SetTrigger(_shot);
@@ -54,7 +61,7 @@ public class Player : MonoBehaviour
 
             _animator.SetTrigger(_walk);
         }
-        
+
         if (Input.GetKey(KeyCode.A))
         {
             _spriteRenderer.flipX = true;
@@ -63,21 +70,21 @@ public class Player : MonoBehaviour
 
             _animator.SetTrigger(_walk);
         }
-        
+
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            _animator.SetInteger(_run, 2);
-
             if (_speed <= _defaultSpeed)
             {
-                _speed = +_speed * 2;
-                _backSpeed = +_backSpeed * 2;
+                _speed = _speed * _runSpeed;
+                _backSpeed = _backSpeed * _runSpeed;
+
+                _animator.SetInteger(_run, _runSpeed);
             }
         }
-     
+
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            _animator.SetInteger(_run, 0);
+            _animator.SetInteger(_run, _idleSpeed);
             _speed = _defaultSpeed;
             _backSpeed = _defaultBackSpeed;
         }
