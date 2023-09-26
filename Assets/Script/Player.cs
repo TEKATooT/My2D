@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
@@ -13,10 +12,9 @@ public class Player : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _rigidbody2D;
 
-    private int _idleSpeed = 0;
-    private int _runSpeed = 2;
-
+    private float _idleSpeed = 0;
     private float _speed = 1.0f;
+    private float _runSpeed = 2;
     private float _jumpPower = 5.0f;
     private float _backSpeed = -1.0f;
     private float _defaultSpeed = 1.0f;
@@ -24,7 +22,7 @@ public class Player : MonoBehaviour
 
     private int _shot = Animator.StringToHash("Shot");
     private int _walk = Animator.StringToHash("Walk");
-    private int _run = Animator.StringToHash("Run");
+    private int _fast = Animator.StringToHash("Fast");
     private int _jump = Animator.StringToHash("Jump");
 
     private void Start()
@@ -78,13 +76,13 @@ public class Player : MonoBehaviour
                 _speed = _speed * _runSpeed;
                 _backSpeed = _backSpeed * _runSpeed;
 
-                _animator.SetInteger(_run, _runSpeed);
+                _animator.SetFloat(_fast, _runSpeed);
             }
         }
 
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            _animator.SetInteger(_run, _idleSpeed);
+            _animator.SetFloat(_fast, _idleSpeed);
             _speed = _defaultSpeed;
             _backSpeed = _defaultBackSpeed;
         }
