@@ -59,6 +59,7 @@
     <Compile Include="Assets\Other\Script\Coin.cs" />
     <Compile Include="Assets\Other\Script\Info.cs" />
     <Compile Include="Assets\Other\Script\Menu.cs" />
+    <Compile Include="Assets\Script\BarRenderer.cs" />
     <Compile Include="Assets\Script\Player.cs" />
     <Compile Include="Assets\Other\Script\PlayerMove.cs" />
     <Compile Include="Assets\Other\Script\EnemyMove.cs" />
@@ -68,7 +69,6 @@
     <Compile Include="Assets\Other\Script\Alarm.cs" />
     <Compile Include="Assets\Other\Script\Spawner.cs" />
     <Compile Include="Assets\Other\Script\BlackHole.cs" />
-    <Compile Include="Assets\Script\BarRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
