@@ -17,6 +17,7 @@ public class EntryHouse : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.TryGetComponent<Player>(out Player player))
+
             _exit.Invoke();
     }
 }

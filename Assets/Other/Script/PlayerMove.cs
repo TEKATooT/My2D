@@ -1,11 +1,10 @@
-
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Rigidbody2D))]
 
-public class Player : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _player;
 

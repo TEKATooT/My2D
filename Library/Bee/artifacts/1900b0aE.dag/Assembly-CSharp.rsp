@@ -380,8 +380,8 @@
 "Assets/Other/Script/Menu.cs"
 "Assets/Other/Script/PlayerMove.cs"
 "Assets/Other/Script/Spawner.cs"
+"Assets/Script/BarRenderer.cs"
 "Assets/Script/Player.cs"
-"Assets/Script/PlayerHealthBar.cs"
 -langversion:9.0
 
 /deterministic
