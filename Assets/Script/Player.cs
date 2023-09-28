@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
     private float _damage = -.1f;
     private float _zeroHealth = 0;
 
-    public float Health => _health;
     public void GiveHeal()
     {
         if (_health < _startHealth)

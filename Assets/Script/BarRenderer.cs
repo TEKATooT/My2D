@@ -8,25 +8,18 @@ public class BarRenderer : MonoBehaviour
     [SerializeField] private Slider _slider;
     [SerializeField] private float _reactionSlider;
 
-    private float _maxValue = 1;
-    private float _minValue = 0;
     private float _nowValue = 1;
+    private float _stepValue = .1f;
 
-    public void UpSlider(float value)
+    public void UpSlider()
     {
-        if (_nowValue < _maxValue)
-        {
-            _nowValue += value;
+            _nowValue += _stepValue;
             _slider.DOValue(_nowValue, _reactionSlider);
-        }
     }
 
-    public void DownSlider(float value)
+    public void DownSlider()
     {
-        if (_nowValue > _minValue)
-        {
-            _nowValue -= value;
+            _nowValue -= _stepValue;
             _slider.DOValue(_nowValue, _reactionSlider);
-        }
     }
 }
