@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
 
     private Transform[] _respawnsPoints;
 
-    private float _respawnsTime = 2f;
+    private float _respawnsTime = 20f;
 
     private int _minRandomPosition = 0;
     private int _maxRandomPosition;
