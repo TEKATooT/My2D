@@ -58,27 +58,28 @@
   <ItemGroup>
     <Compile Include="Assets\Other\Script\Coin.cs" />
     <Compile Include="Assets\Other\Script\Info.cs" />
-    <Compile Include="Assets\Script\EnemyStateMashine\Transition.cs" />
+    <Compile Include="Assets\Other\Script\EnemyStateMashine\Transition.cs" />
     <Compile Include="Assets\Other\Script\Menu.cs" />
-    <Compile Include="Assets\Script\MonstersSpawner.cs" />
-    <Compile Include="Assets\Script\EnemyStateMashine\Transitions\DistanceTransition.cs" />
-    <Compile Include="Assets\Script\EnemyStateMashine\State\WinerState.cs" />
+    <Compile Include="Assets\Other\Script\MonstersSpawner.cs" />
+    <Compile Include="Assets\Other\Script\EnemyStateMashine\Transitions\DistanceTransition.cs" />
+    <Compile Include="Assets\Other\Script\EnemyStateMashine\State\WinerState.cs" />
     <Compile Include="Assets\Other\Script\BarRenderer.cs" />
-    <Compile Include="Assets\Script\Player.cs" />
     <Compile Include="Assets\Other\Script\PlayerMove.cs" />
-    <Compile Include="Assets\Script\EnemyStateMashine\StateMashine.cs" />
+    <Compile Include="Assets\Other\Script\EnemyStateMashine\StateMashine.cs" />
     <Compile Include="Assets\Other\Script\EnemyPatrol.cs" />
-    <Compile Include="Assets\Script\EnemyStateMashine\State\AttackState.cs" />
-    <Compile Include="Assets\Script\EnemyStateMashine\State\RunState.cs" />
+    <Compile Include="Assets\Other\Script\EnemyStateMashine\State\AttackState.cs" />
+    <Compile Include="Assets\Other\Script\EnemyStateMashine\State\RunState.cs" />
     <Compile Include="Assets\Other\Script\CoinSpawner.cs" />
     <Compile Include="Assets\Other\Script\Ball.cs" />
     <Compile Include="Assets\Other\Script\EntryHouse.cs" />
-    <Compile Include="Assets\Script\EnemyStateMashine\State.cs" />
-    <Compile Include="Assets\Script\Monster.cs" />
-    <Compile Include="Assets\Script\EnemyStateMashine\Transitions\TargetDeadTransition.cs" />
+    <Compile Include="Assets\Other\Script\EnemyStateMashine\State.cs" />
+    <Compile Include="Assets\Other\Script\Monster.cs" />
+    <Compile Include="Assets\Other\Script\EnemyStateMashine\Transitions\TargetDeadTransition.cs" />
     <Compile Include="Assets\Other\Script\Alarm.cs" />
     <Compile Include="Assets\Other\Script\Spawner.cs" />
     <Compile Include="Assets\Other\Script\BlackHole.cs" />
+    <Compile Include="Assets\Script\Player2d.cs" />
+    <Compile Include="Assets\Other\Script\Player.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
