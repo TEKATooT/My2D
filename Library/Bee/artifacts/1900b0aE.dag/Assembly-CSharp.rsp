@@ -392,7 +392,11 @@
 "Assets/Other/Script/Player.cs"
 "Assets/Other/Script/PlayerMove.cs"
 "Assets/Other/Script/Spawner.cs"
-"Assets/Script/Player2d.cs"
+"Assets/Scripts/Bullet.cs"
+"Assets/Scripts/MashineGun.cs"
+"Assets/Scripts/Pistol.cs"
+"Assets/Scripts/Player2d.cs"
+"Assets/Scripts/Weapon.cs"
 -langversion:9.0
 
 /deterministic
