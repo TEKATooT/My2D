@@ -105,7 +105,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 9
   m_Sprite: {fileID: 1133839514, guid: 105ddf15cd32b834d92696c2b82f1972, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -129,9 +129,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0c2e376636ecfa43a892240b7ca3ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _label: TrTrr
-  _price: 222
-  _icon: {fileID: 0}
-  _isBuyed: 0
   Bullet: {fileID: 5141857041726999345, guid: 4d958867b88dd2647840a0380a546a15, type: 3}
   _shootPoint: {fileID: 622323007426155452}

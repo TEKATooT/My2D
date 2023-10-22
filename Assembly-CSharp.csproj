@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Other\Script\Coin.cs" />
-    <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Bullet.cs" />
     <Compile Include="Assets\Other\Script\Info.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\Transition.cs" />
     <Compile Include="Assets\Other\Script\Menu.cs" />
@@ -66,14 +66,14 @@
     <Compile Include="Assets\Other\Script\EnemyStateMashine\Transitions\DistanceTransition.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\State\WinerState.cs" />
     <Compile Include="Assets\Other\Script\BarRenderer.cs" />
-    <Compile Include="Assets\Scripts\MashineGun.cs" />
+    <Compile Include="Assets\Scripts\Weapons\MashineGun.cs" />
     <Compile Include="Assets\Other\Script\PlayerMove.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\StateMashine.cs" />
     <Compile Include="Assets\Other\Script\EnemyPatrol.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\State\AttackState.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\State\RunState.cs" />
     <Compile Include="Assets\Other\Script\CoinSpawner.cs" />
-    <Compile Include="Assets\Scripts\Pistol.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Pistol.cs" />
     <Compile Include="Assets\Other\Script\Ball.cs" />
     <Compile Include="Assets\Other\Script\EntryHouse.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\State.cs" />
@@ -84,6 +84,7 @@
     <Compile Include="Assets\Other\Script\Spawner.cs" />
     <Compile Include="Assets\Other\Script\BlackHole.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Shop.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -7,12 +7,12 @@ using UnityEngine;
 public class Player2d : MonoBehaviour
 {
     [SerializeField] private Weapon _currentWeapon;
-    //[SerializeField] private Transform _gunTransform;
+    [SerializeField] private Transform _gunTransform;
 
     private Animator _animator;
     private int _shot = Animator.StringToHash("Shooting");
 
-   // public Transform GunTransform => _gunTransform;
+    public Transform GunTransform => _gunTransform;
 
     private void Awake()
     {
@@ -27,5 +27,10 @@ public class Player2d : MonoBehaviour
 
             _animator.Play(_shot);
         }
+    }
+
+    public void TakeWeapon(Weapon weapon)
+    {
+        _currentWeapon = weapon;
     }
 }
