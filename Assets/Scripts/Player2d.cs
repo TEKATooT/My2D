@@ -31,6 +31,8 @@ public class Player2d : MonoBehaviour
 
     public void TakeWeapon(Weapon weapon)
     {
+        _currentWeapon.Remove();
+
         _currentWeapon = weapon;
     }
 }

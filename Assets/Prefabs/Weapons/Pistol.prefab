@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 63f6a6d0cbbc5a1468c49c7c6eb7db02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,10 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876ee731e407fbd49927ca50f13c3b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _label: Pistol
-  _price: 11
-  _icon: {fileID: 0}
-  _isBuyed: 0
   Bullet: {fileID: 5141857041726999345, guid: 4d958867b88dd2647840a0380a546a15, type: 3}
   _shootPoint: {fileID: 8151628951278254322}
 --- !u!1 &7232690044473532425

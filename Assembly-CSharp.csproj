@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Player2d.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\Transitions\DistanceTransition.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\State\WinerState.cs" />
+    <Compile Include="Assets\Scripts\Shop.cs" />
     <Compile Include="Assets\Other\Script\BarRenderer.cs" />
     <Compile Include="Assets\Scripts\Weapons\MashineGun.cs" />
     <Compile Include="Assets\Other\Script\PlayerMove.cs" />
@@ -84,7 +85,6 @@
     <Compile Include="Assets\Other\Script\Spawner.cs" />
     <Compile Include="Assets\Other\Script\BlackHole.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
-    <Compile Include="Assets\Scripts\Shop.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

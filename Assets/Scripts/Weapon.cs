@@ -9,4 +9,9 @@ public abstract class Weapon : MonoBehaviour
     protected Player2d _player2d;
 
     public abstract void Shoot();
+
+    public void Remove()
+    {
+        Destroy(gameObject);
+    }
 }
