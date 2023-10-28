@@ -1,0 +1,17 @@
+{
+    "name": "New Controls",
+    "maps": [],
+    "controlSchemes": [
+        {
+            "name": "Pad",
+            "bindingGroup": "Pad",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}

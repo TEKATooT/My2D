@@ -15,10 +15,11 @@ public class PlayerMove : MonoBehaviour
     private float _idleSpeed = 0;
     private float _speed = 1.0f;
     private float _runSpeed = 2;
-    private float _jumpPower = 5.0f;
+    private float _jumpPower = 245.0f;
     private float _backSpeed = -1.0f;
     private float _defaultSpeed = 1.0f;
     private float _defaultBackSpeed = -1.0f;
+    private float _jumpCoolDown;
 
     private int _shot = Animator.StringToHash("Shot");
     private int _walk = Animator.StringToHash("Walk");
@@ -39,6 +40,8 @@ public class PlayerMove : MonoBehaviour
 
     private void Moving()
     {
+        _jumpCoolDown += Time.deltaTime;
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _animator.SetTrigger(_shot);
@@ -46,27 +49,37 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            _animator.SetTrigger(_jump);
+            if (_jumpCoolDown > 1)
+            {
+                _animator.SetTrigger(_jump);
+                _rigidbody2D.AddForce(Vector2.up * _jumpPower);
 
-            _rigidbody2D.velocity = _player.transform.up * _jumpPower;
+                _jumpCoolDown = 0;
+            }
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            _spriteRenderer.flipX = false;
+            if (_jumpCoolDown > 1)
+            {
+                _spriteRenderer.flipX = false;
 
-            _rigidbody2D.velocity = _player.transform.right * _speed;
+                _rigidbody2D.velocity = _player.transform.right * _speed;
 
-            _animator.SetTrigger(_walk);
+                _animator.SetTrigger(_walk);
+            }
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            _spriteRenderer.flipX = true;
+            if (_jumpCoolDown > 1)
+            {
+                _spriteRenderer.flipX = true;
 
-            _rigidbody2D.velocity = _player.transform.right * _backSpeed;
+                _rigidbody2D.velocity = _player.transform.right * _backSpeed;
 
-            _animator.SetTrigger(_walk);
+                _animator.SetTrigger(_walk);
+            }
         }
 
         if (Input.GetKey(KeyCode.LeftShift))
