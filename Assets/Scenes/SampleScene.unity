@@ -519,7 +519,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1385593669}
   m_FillRect: {fileID: 1879658332}
   m_HandleRect: {fileID: 1385593668}
@@ -5653,7 +5653,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 74791204}
   m_HandleRect: {fileID: 0}
@@ -5802,6 +5802,7 @@ GameObject:
   - component: {fileID: 1827952333}
   - component: {fileID: 1827952344}
   - component: {fileID: 1827952345}
+  - component: {fileID: 1827952346}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -5920,7 +5921,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -669757013, guid: c80a0d7b9b8eda94fb26b74bf019a902, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.728, y: 1.08}
@@ -6000,6 +6001,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1827952346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827952321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71df61e6f504b5344806dec074eaeecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hitRange: 0.75
 --- !u!1 &1831129793
 GameObject:
   m_ObjectHideFlags: 0
@@ -6544,6 +6558,10 @@ PrefabInstance:
       propertyPath: _currentWeapon
       value: 
       objectReference: {fileID: 1857386824}
+    - target: {fileID: 1973836573, guid: e3c5fb05f3eb2174ba0d6a4157d50d20, type: 3}
+      propertyPath: m_Constraints
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 559478872552292161, guid: e3c5fb05f3eb2174ba0d6a4157d50d20, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.95247555

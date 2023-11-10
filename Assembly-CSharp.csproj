@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{23C34B0A-693B-15BE-2B86-2A27C2B94218}</ProjectGuid>
+    <ProjectGuid>{C8523C29-3152-F541-C001-395BC14082F0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,24 +57,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Other\Script\Coin.cs" />
-    <Compile Include="Assets\Scripts\Weapons\Bullet.cs" />
+    <Compile Include="Assets\Other\Script\2dPlayer\Weapons\Bullet.cs" />
     <Compile Include="Assets\Other\Script\Info.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\Transition.cs" />
     <Compile Include="Assets\Other\Script\Menu.cs" />
     <Compile Include="Assets\Other\Script\MonstersSpawner.cs" />
-    <Compile Include="Assets\Scripts\Player2d.cs" />
+    <Compile Include="Assets\Other\Script\2dPlayer\Player2d.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\Transitions\DistanceTransition.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\State\WinerState.cs" />
-    <Compile Include="Assets\Scripts\Shop.cs" />
+    <Compile Include="Assets\Other\Script\Player2dBar.cs" />
+    <Compile Include="Assets\Other\Script\2dPlayer\Shop.cs" />
     <Compile Include="Assets\Other\Script\BarRenderer.cs" />
-    <Compile Include="Assets\Scripts\Weapons\MashineGun.cs" />
-    <Compile Include="Assets\Other\Script\PlayerMove.cs" />
+    <Compile Include="Assets\Other\Script\2dPlayer\Weapons\MashineGun.cs" />
+    <Compile Include="Assets\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\StateMashine.cs" />
     <Compile Include="Assets\Other\Script\EnemyPatrol.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\State\AttackState.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\State\RunState.cs" />
     <Compile Include="Assets\Other\Script\CoinSpawner.cs" />
-    <Compile Include="Assets\Scripts\Weapons\Pistol.cs" />
+    <Compile Include="Assets\Other\Script\2dPlayer\Weapons\Pistol.cs" />
     <Compile Include="Assets\Other\Script\Ball.cs" />
     <Compile Include="Assets\Other\Script\EntryHouse.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\State.cs" />
@@ -84,8 +85,8 @@
     <Compile Include="Assets\Other\Script\Alarm.cs" />
     <Compile Include="Assets\Other\Script\Spawner.cs" />
     <Compile Include="Assets\Other\Script\BlackHole.cs" />
-    <Compile Include="Assets\Scripts\Weapon.cs" />
-    <Compile Include="Assets\Other\Script\Player2dBar.cs" />
+    <Compile Include="Assets\Other\Script\2dPlayer\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Hiting.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -873,7 +874,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{898A624B-8845-A7A6-4F58-6274A23C6B8F}</Project>
+      <Project>{6905FA9A-88F4-1E93-227B-9971C7AAA5C1}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
