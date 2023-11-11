@@ -12,6 +12,8 @@ public class PlayerMove : MonoBehaviour
     private Animator _animator;
     private Rigidbody2D _rigidbody2D;
 
+    public UnityAction Hited;
+
     private int _flipRight = 0;
     private int _flipLeft = 160;
 
@@ -45,6 +47,8 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _animator.SetTrigger(_shot);
+
+            Hited?.Invoke();
         }
 
         if (Input.GetKeyDown(KeyCode.W))

@@ -77,6 +77,7 @@
     <Compile Include="Assets\Other\Script\CoinSpawner.cs" />
     <Compile Include="Assets\Other\Script\2dPlayer\Weapons\Pistol.cs" />
     <Compile Include="Assets\Other\Script\Ball.cs" />
+    <Compile Include="Assets\Scripts\Hiting.cs" />
     <Compile Include="Assets\Other\Script\EntryHouse.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\State.cs" />
     <Compile Include="Assets\Other\Script\Player.cs" />
@@ -86,7 +87,7 @@
     <Compile Include="Assets\Other\Script\Spawner.cs" />
     <Compile Include="Assets\Other\Script\BlackHole.cs" />
     <Compile Include="Assets\Other\Script\2dPlayer\Weapon.cs" />
-    <Compile Include="Assets\Scripts\Hiting.cs" />
+    <Compile Include="Assets\Scripts\Blooding.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

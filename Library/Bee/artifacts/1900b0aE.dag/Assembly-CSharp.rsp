@@ -400,6 +400,7 @@
 "Assets/Other/Script/Player.cs"
 "Assets/Other/Script/Player2dBar.cs"
 "Assets/Other/Script/Spawner.cs"
+"Assets/Scripts/Blooding.cs"
 "Assets/Scripts/Hiting.cs"
 "Assets/Scripts/PlayerMove.cs"
 -langversion:9.0

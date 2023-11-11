@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(ParticleSystemRenderer))]
 
 public class Player2d : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Player2d : MonoBehaviour
     [SerializeField] private Transform _gunHand;
 
     [SerializeField] private int _health;
+
+    private ParticleSystemRenderer _particleSystemRenderer;
 
     private Animator _animator;
     private int _shot = Animator.StringToHash("Shooting");
@@ -25,6 +28,8 @@ public class Player2d : MonoBehaviour
 
     private void Awake()
     {
+        _particleSystemRenderer = GetComponent<ParticleSystemRenderer>();
+
         _animator = GetComponent<Animator>();
 
         HealthChanged?.Invoke(_health);
@@ -54,5 +59,7 @@ public class Player2d : MonoBehaviour
         _health -= damage;
 
         HealthChanged?.Invoke(_health);
+
+        _particleSystemRenderer.enabled = true;
     }
 }
