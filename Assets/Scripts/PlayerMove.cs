@@ -9,6 +9,8 @@ public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _player;
 
+    [SerializeField] private ParticleSystem _glitters;
+
     private Animator _animator;
     private Rigidbody2D _rigidbody2D;
 
@@ -22,7 +24,9 @@ public class PlayerMove : MonoBehaviour
     private float _runSpeed = 2;
     private float _jumpPower = 245.0f;
     private float _defaultSpeed = 1.0f;
-    private float _jumpCoolDown;
+
+    private float _timeWithoutJump;
+    private float _jumpCoolDown = 1;
 
     private int _shot = Animator.StringToHash("Shot");
     private int _walk = Animator.StringToHash("Walk");
@@ -42,7 +46,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Moving()
     {
-        _jumpCoolDown += Time.deltaTime;
+        _timeWithoutJump += Time.deltaTime;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -53,18 +57,18 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            if (_jumpCoolDown > 1)
+            if (_timeWithoutJump > _jumpCoolDown)
             {
                 _animator.SetTrigger(_jump);
                 _rigidbody2D.AddForce(Vector2.up * _jumpPower);
 
-                _jumpCoolDown = 0;
+                _timeWithoutJump = 0;
             }
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            if (_jumpCoolDown > 1)
+            if (_timeWithoutJump > _jumpCoolDown)
             {
                 transform.rotation = Quaternion.Euler(0, _flipRight, 0);
 
@@ -76,7 +80,7 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            if (_jumpCoolDown > 1)
+            if (_timeWithoutJump > _jumpCoolDown)
             {
                 transform.rotation = Quaternion.Euler(0, _flipLeft, 0);
 
@@ -105,6 +109,6 @@ public class PlayerMove : MonoBehaviour
 
     private void OnMouseDown()
     {
-        _animator.SetTrigger(_shot);
+        _glitters.Play();
     }
 }

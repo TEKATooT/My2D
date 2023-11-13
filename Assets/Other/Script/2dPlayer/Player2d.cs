@@ -1,10 +1,11 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(ParticleSystemRenderer))]
+[RequireComponent(typeof(ParticleSystem))]
 
 public class Player2d : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class Player2d : MonoBehaviour
 
     [SerializeField] private int _health;
 
-    private ParticleSystemRenderer _particleSystemRenderer;
+    [SerializeField] private ParticleSystem _particleSystem;
 
     private Animator _animator;
     private int _shot = Animator.StringToHash("Shooting");
@@ -28,7 +29,7 @@ public class Player2d : MonoBehaviour
 
     private void Awake()
     {
-        _particleSystemRenderer = GetComponent<ParticleSystemRenderer>();
+        _particleSystem = GetComponent<ParticleSystem>();
 
         _animator = GetComponent<Animator>();
 
@@ -60,6 +61,6 @@ public class Player2d : MonoBehaviour
 
         HealthChanged?.Invoke(_health);
 
-        _particleSystemRenderer.enabled = true;
+        _particleSystem.Play();
     }
 }

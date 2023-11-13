@@ -1,16 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Hiting : MonoBehaviour
 {
     [SerializeField] private float _hitRange;
-    [SerializeField] private float _hitPower;
+    [SerializeField] private int _hitPower;
 
     [SerializeField] private PlayerMove _player;
 
-    private GameObject _target;
+    [SerializeField] private Transform _gunPosition;
+
+    [SerializeField] private Player2d _player2;
 
     private void OnEnable()
     {
@@ -24,19 +23,18 @@ public class Hiting : MonoBehaviour
 
     private void GiveHit()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right * _hitRange);
+        RaycastHit2D hit = Physics2D.Raycast(_gunPosition.position, transform.right, _hitRange);
 
-        //Debug.DrawRay(transform.position, transform.right * _hitRange, Color.red);
-
-        //Debug.Log("GO");
+       // Debug.DrawRay(_gunPosition.position, transform.right, Color.red);
 
         if (hit)
         {
-            _target = hit.collider.GetComponent<GameObject>();
+            if (_player2.gameObject == hit.collider.gameObject)
+            {
+                //  Debug.Log("HIT!");
 
-            _target.SetActive(false);
-
-            //_target.TakeDamage(_hitPower);
+                _player2.TakeDamage(_hitPower);
+            }
         }
     }
 }
