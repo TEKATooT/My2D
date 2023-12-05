@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    private Transform _target;
+
     [SerializeField] private float _ballSpeed;
-
-    private GameObject _target;
-
-    private void Start()
-    {
-        _target = GameObject.Find("blackHole");
-    }
 
     private void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, _target.transform.position, _ballSpeed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, _target.position, _ballSpeed * Time.deltaTime);
+    }
+
+    public void GetTarget(Transform target)
+    {
+        _target = target;
     }
 }

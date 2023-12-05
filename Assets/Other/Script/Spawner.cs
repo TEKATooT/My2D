@@ -3,17 +3,25 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private Ball _ball;
+    [SerializeField] private Transform _target;
     [SerializeField] private Transform _respawns;
+    [SerializeField] private Ball _ball;
 
     private Transform[] _respawnsPoints;
 
-    private float _respawnsTime = 20f;
+    private float _respawnsTime = 5f;
 
     private int _minRandomPosition = 0;
     private int _maxRandomPosition;
 
     private void Start()
+    {
+        SpawnerReloader();
+
+        StartCoroutine(RespawnsTime());
+    }
+
+    private void SpawnerReloader()
     {
         _respawnsPoints = new Transform[_respawns.childCount];
 
@@ -23,8 +31,6 @@ public class Spawner : MonoBehaviour
         }
 
         _maxRandomPosition = _respawns.childCount;
-
-        StartCoroutine(RespawnsTime());
     }
 
     private IEnumerator RespawnsTime()
@@ -35,9 +41,12 @@ public class Spawner : MonoBehaviour
         {
             int respawnPoint = Random.Range(_minRandomPosition, _maxRandomPosition);
 
-            Instantiate(_ball, _respawnsPoints[respawnPoint].position, Quaternion.identity);
+            var newBall = Instantiate(_ball, _respawnsPoints[respawnPoint].position, Quaternion.identity);
+            
+            newBall.GetTarget(_target);
 
             yield return waitForSeconds;
         }
+
     }
 }
