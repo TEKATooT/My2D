@@ -76,7 +76,7 @@
     <Compile Include="Assets\Other\Script\EnemyStateMashine\State\RunState.cs" />
     <Compile Include="Assets\Other\Script\CoinSpawner.cs" />
     <Compile Include="Assets\Other\Script\2dPlayer\Weapons\Pistol.cs" />
-    <Compile Include="Assets\Other\Script\Ball.cs" />
+    <Compile Include="Assets\Scripts\Ball.cs" />
     <Compile Include="Assets\Other\Script\Hiting.cs" />
     <Compile Include="Assets\Other\Script\EntryHouse.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\State.cs" />
@@ -84,7 +84,7 @@
     <Compile Include="Assets\Other\Script\Monster.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\Transitions\TargetDeadTransition.cs" />
     <Compile Include="Assets\Other\Script\Alarm.cs" />
-    <Compile Include="Assets\Other\Script\Spawner.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Other\Script\BlackHole.cs" />
     <Compile Include="Assets\Other\Script\2dPlayer\Weapon.cs" />
   </ItemGroup>
