@@ -8,7 +8,8 @@ public class Ball : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, _target.position, _ballSpeed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards
+            (transform.position, _target.position, _ballSpeed * Time.deltaTime);
     }
 
     public void GetTarget(Transform target)
