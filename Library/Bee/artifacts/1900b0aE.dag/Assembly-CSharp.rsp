@@ -400,8 +400,10 @@
 "Assets/Other/Script/Player.cs"
 "Assets/Other/Script/Player2dBar.cs"
 "Assets/Other/Script/PlayerMove.cs"
+"Assets/Scripts/AbstractProjectile.cs"
 "Assets/Scripts/Ball.cs"
 "Assets/Scripts/Spawner.cs"
+"Assets/Scripts/Сannonball.cs"
 -langversion:9.0
 
 /deterministic

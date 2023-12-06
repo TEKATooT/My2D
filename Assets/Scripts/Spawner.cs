@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Threading;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
@@ -6,13 +7,16 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Transform _target;
     [SerializeField] private Transform _respawns;
     [SerializeField] private Ball _ball;
+    [SerializeField] private Ñannonball _projectile;
+    [SerializeField] private Player _player;
+    [SerializeField] private float _respawnsTime;
 
     private Transform[] _respawnsPoints;
 
-    private float _respawnsTime = 5f;
-
     private int _minRandomPosition = 0;
     private int _maxRandomPosition;
+    private int _half = 2;
+    private int _halfOfSpawners;
 
     private void Start()
     {
@@ -31,6 +35,8 @@ public class Spawner : MonoBehaviour
         }
 
         _maxRandomPosition = _respawns.childCount;
+
+        _halfOfSpawners = _maxRandomPosition / _half;
     }
 
     private IEnumerator RespawnsTime()
@@ -41,12 +47,20 @@ public class Spawner : MonoBehaviour
         {
             int respawnPoint = Random.Range(_minRandomPosition, _maxRandomPosition);
 
-            var newBall = Instantiate(_ball, _respawnsPoints[respawnPoint].position, Quaternion.identity);
-            
-            newBall.GetTarget(_target);
+            if (respawnPoint > _halfOfSpawners)
+            {
+                var newAmmunition = Instantiate(_ball, _respawnsPoints[respawnPoint].position, Quaternion.identity);
+
+                newAmmunition.GetTarget(_target);
+            }
+            else
+            {
+                var newAmmunition = Instantiate(_projectile, _respawnsPoints[respawnPoint].position, Quaternion.identity);
+
+                newAmmunition.GetTarget(_player.transform);
+            }
 
             yield return waitForSeconds;
         }
-
     }
 }

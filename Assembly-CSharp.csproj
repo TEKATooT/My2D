@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Other\Script\Coin.cs" />
     <Compile Include="Assets\Other\Script\2dPlayer\Weapons\Bullet.cs" />
+    <Compile Include="Assets\Scripts\Сannonball.cs" />
     <Compile Include="Assets\Other\Script\Info.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\Transition.cs" />
     <Compile Include="Assets\Other\Script\Menu.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Assets\Other\Script\2dPlayer\Weapons\MashineGun.cs" />
     <Compile Include="Assets\Other\Script\PlayerMove.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\StateMashine.cs" />
+    <Compile Include="Assets\Scripts\AbstractProjectile.cs" />
     <Compile Include="Assets\Other\Script\EnemyPatrol.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\State\AttackState.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\State\RunState.cs" />
