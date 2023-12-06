@@ -547,7 +547,7 @@ GameObject:
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &233383324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,12 +577,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233383323}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.217493, y: -1.8625015, z: -0.09104951}
+  m_LocalPosition: {x: -1.0799999, y: -2.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1300944287}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &288731586
 GameObject:
@@ -7522,7 +7522,7 @@ RectTransform:
   - {fileID: 1648126699}
   - {fileID: 743054674}
   m_Father: {fileID: 1300944287}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12498,7 +12498,7 @@ Transform:
   m_Children:
   - {fileID: 563466168}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 12.106, y: -90, z: 90}
 --- !u!1 &909721392
 GameObject:
@@ -12525,9 +12525,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909721392}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.43, y: 1.57, z: 1}
+  m_LocalScale: {x: 0.43, y: 1.5699999, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 965849782}
@@ -12535,7 +12535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.24, y: 51}
+  m_AnchoredPosition: {x: 0.23999666, y: 51.000202}
   m_SizeDelta: {x: 83.36, y: 60.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &909721394
@@ -14120,7 +14120,7 @@ RectTransform:
   - {fileID: 659608026}
   - {fileID: 1684125522}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -14537,11 +14537,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 456078474}
-  - {fileID: 1692238606}
-  - {fileID: 233383325}
   - {fileID: 888470253}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1362183358
 GameObject:
@@ -14908,7 +14906,7 @@ GameObject:
   - component: {fileID: 1575668461}
   - component: {fileID: 1575668464}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: ProjectileSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14952,7 +14950,7 @@ Transform:
   - {fileID: 1970134254}
   - {fileID: 402392471}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1575668463
 BoxCollider2D:
@@ -15428,7 +15426,7 @@ GameObject:
   - component: {fileID: 1692238605}
   - component: {fileID: 1692238607}
   m_Layer: 0
-  m_Name: CoinsSpawner
+  m_Name: ItemSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15446,8 +15444,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf6ea8f4b649384bb03f4e5092b75af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coin: {fileID: 8710731092761819767, guid: e6d7f239f3a26a24b88a32784d31df59, type: 3}
+  _respawnsItem: {fileID: 694988144225252869, guid: e6d7f239f3a26a24b88a32784d31df59, type: 3}
   _respawns: {fileID: 1692238606}
+  _respawnsTime: 2
 --- !u!4 &1692238606
 Transform:
   m_ObjectHideFlags: 0
@@ -15456,7 +15455,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692238604}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3447285, y: 0.42503035, z: -0.09104951}
+  m_LocalPosition: {x: -1.9527645, y: -0.61246824, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15469,8 +15468,8 @@ Transform:
   - {fileID: 959488990}
   - {fileID: 4084083}
   - {fileID: 810162100}
-  m_Father: {fileID: 1300944287}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1692238607
 SpriteRenderer:

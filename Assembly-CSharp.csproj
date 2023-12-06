@@ -76,7 +76,7 @@
     <Compile Include="Assets\Other\Script\EnemyPatrol.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\State\AttackState.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\State\RunState.cs" />
-    <Compile Include="Assets\Other\Script\CoinSpawner.cs" />
+    <Compile Include="Assets\Other\Script\ItemSpawner.cs" />
     <Compile Include="Assets\Other\Script\2dPlayer\Weapons\Pistol.cs" />
     <Compile Include="Assets\Scripts\Ball.cs" />
     <Compile Include="Assets\Other\Script\Hiting.cs" />
