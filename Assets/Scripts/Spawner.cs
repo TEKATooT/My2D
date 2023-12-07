@@ -55,12 +55,17 @@ public class Spawner : MonoBehaviour
             }
             else
             {
-                var newAmmunition = Instantiate(_projectile, _respawnsPoints[respawnPoint].position, Quaternion.identity);
-
-                newAmmunition.GetTarget(_player.transform);
+                ThrowShel(_projectile, _player.transform, respawnPoint);
             }
 
             yield return waitForSeconds;
         }
+    }
+
+    private void ThrowShell(GameObject shell, Transform target, int respawnPoint)
+    {
+                var newShell = Instantiate(shell, _respawnsPoints[respawnPoint].position, Quaternion.identity);
+
+                newShell.GetTarget(target);
     }
 }
