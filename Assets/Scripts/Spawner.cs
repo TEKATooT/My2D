@@ -21,7 +21,7 @@ public class Spawner : MonoBehaviour
     private void Start()
     {
         SpawnerReloader();
-
+        
         StartCoroutine(RespawnsTime());
     }
 
@@ -49,23 +49,21 @@ public class Spawner : MonoBehaviour
 
             if (respawnPoint > _halfOfSpawners)
             {
-                var newAmmunition = Instantiate(_ball, _respawnsPoints[respawnPoint].position, Quaternion.identity);
-
-                newAmmunition.GetTarget(_target);
+                ThrowShell(_ball, _target, respawnPoint);
             }
             else
             {
-                ThrowShel(_projectile, _player.transform, respawnPoint);
+                ThrowShell(_projectile, _player.transform, respawnPoint);
             }
 
             yield return waitForSeconds;
         }
     }
 
-    private void ThrowShell(GameObject shell, Transform target, int respawnPoint)
+    private void ThrowShell(AbstractProjectile shell, Transform target, int respawnPoint)
     {
-                var newShell = Instantiate(shell, _respawnsPoints[respawnPoint].position, Quaternion.identity);
+        var newShell = Instantiate(shell, _respawnsPoints[respawnPoint].position, Quaternion.identity);
 
-                newShell.GetTarget(target);
+        newShell.GetTarget(target);
     }
 }
