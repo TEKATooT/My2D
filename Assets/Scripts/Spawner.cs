@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Transform _target;
     [SerializeField] private Transform _respawns;
     [SerializeField] private Ball _ball;
-    [SerializeField] private Ñannonball _projectile;
+    [SerializeField] private Cannonball _projectile;
     [SerializeField] private Player _player;
     [SerializeField] private float _respawnsTime;
 

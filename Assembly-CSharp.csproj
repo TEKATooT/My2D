@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C8523C29-3152-F541-C001-395BC14082F0}</ProjectGuid>
+    <ProjectGuid>{23C34B0A-693B-15BE-2B86-2A27C2B94218}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -58,7 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Other\Script\Coin.cs" />
     <Compile Include="Assets\Other\Script\2dPlayer\Weapons\Bullet.cs" />
-    <Compile Include="Assets\Scripts\Сannonball.cs" />
+    <Compile Include="Assets\Scripts\Cannonball.cs" />
     <Compile Include="Assets\Other\Script\Info.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\Transition.cs" />
     <Compile Include="Assets\Other\Script\Menu.cs" />
@@ -876,7 +876,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{6905FA9A-88F4-1E93-227B-9971C7AAA5C1}</Project>
+      <Project>{898A624B-8845-A7A6-4F58-6274A23C6B8F}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
