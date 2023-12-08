@@ -5,5 +5,4 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Cannonball : AbstractProjectile
 {
-
 }

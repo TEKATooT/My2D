@@ -64,6 +64,6 @@ public class Spawner : MonoBehaviour
     {
         var newShell = Instantiate(shell, _respawnsPoints[respawnPoint].position, Quaternion.identity);
 
-        newShell.GetTarget(target);
+        newShell.SetTarget(target);
     }
 }

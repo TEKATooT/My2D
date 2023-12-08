@@ -14,7 +14,7 @@ public abstract class AbstractProjectile : MonoBehaviour
             (transform.position, _target.position, _speed * Time.deltaTime);
     }
 
-    public virtual void GetTarget(Transform target)
+    public virtual void SetTarget(Transform target)
     {
         _target = target;
     }
