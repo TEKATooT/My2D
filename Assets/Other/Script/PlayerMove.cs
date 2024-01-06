@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UIElements;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Rigidbody2D))]
@@ -8,7 +7,7 @@ using UnityEngine.UIElements;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _player;
-
+    [SerializeField] private BarRenderer _barRenderer;
     [SerializeField] private ParticleSystem _glitters;
 
     private Animator _animator;
@@ -42,6 +41,11 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
         Moving();
+
+        if (_barRenderer.transform.rotation != Quaternion.Euler(0, 0, 0))
+        {
+            _barRenderer.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
 
     private void Moving()
