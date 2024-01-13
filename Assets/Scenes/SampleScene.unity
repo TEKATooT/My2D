@@ -14836,53 +14836,9 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1827952345}
-    - target: {fileID: -8751257596797934460, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-      propertyPath: _hitRange
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8751257596797934460, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-      propertyPath: _monsterFront
-      value: 
-      objectReference: {fileID: 1685989674}
-    - target: {fileID: -8751257596797934460, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-      propertyPath: _transitions.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8751257596797934460, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-      propertyPath: _transitions.Array.data[0]
-      value: 
-      objectReference: {fileID: 1817685983}
-    - target: {fileID: -8751257596797934460, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-      propertyPath: _transitions.Array.data[1]
-      value: 
-      objectReference: {fileID: 1817685985}
-    - target: {fileID: -8042753777041017705, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-      propertyPath: _range
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3054207143031989767, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
       propertyPath: m_Name
       value: Monster
-      objectReference: {fileID: 0}
-    - target: {fileID: 3054207143031989817, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-      propertyPath: m_Size.x
-      value: 1.0767968
-      objectReference: {fileID: 0}
-    - target: {fileID: 3054207143031989817, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-      propertyPath: m_Size.y
-      value: 1.1745273
-      objectReference: {fileID: 0}
-    - target: {fileID: 3054207143031989817, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.26660165
-      objectReference: {fileID: 0}
-    - target: {fileID: 3054207143031989817, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.048557937
-      objectReference: {fileID: 0}
-    - target: {fileID: 3054207143031989819, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3054207143031989820, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
       propertyPath: m_RootOrder
@@ -14927,10 +14883,6 @@ PrefabInstance:
     - target: {fileID: 3054207143031989820, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3823810659020233148, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 4046030393571709079, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
       propertyPath: _target
@@ -15445,11 +15397,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _trackablePlayer: {fileID: 0}
   _slider: {fileID: 1684125523}
---- !u!4 &1685989674 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3823810659020233148, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-  m_PrefabInstance: {fileID: 1540910127}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1692238604
 GameObject:
   m_ObjectHideFlags: 0
@@ -15480,7 +15427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf6ea8f4b649384bb03f4e5092b75af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _respawnsItem: {fileID: 694988144225252869, guid: 27e74c5c452e5304e8cc7ddbfa8c3366, type: 3}
+  _respawnsItem: {fileID: 8710731092761819767, guid: 27e74c5c452e5304e8cc7ddbfa8c3366, type: 3}
   _respawns: {fileID: 1692238606}
   _respawnsTime: 2
 --- !u!4 &1692238606
@@ -15559,28 +15506,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1817685983 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -8445196290483871521, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-  m_PrefabInstance: {fileID: 1540910127}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fc11faa2b9c6524c8ebf18fa7ec82fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1817685985 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -8042753777041017705, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-  m_PrefabInstance: {fileID: 1540910127}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcd0c3561863bd046b2df5900b160c58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1817685988 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4046030393571709079, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
@@ -15758,34 +15683,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _upSlider:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1827952345}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: GiveHeal
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   _downSlider:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1827952345}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: GiveDamage
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1827952346
 MonoBehaviour:
   m_ObjectHideFlags: 0

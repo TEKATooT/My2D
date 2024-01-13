@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class WinerState : State
 {
-
+    private void Start()
+    {
+        _animator.Play(_jump);
+    }
 }

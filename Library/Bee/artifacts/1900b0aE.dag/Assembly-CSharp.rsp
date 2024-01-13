@@ -389,6 +389,7 @@
 "Assets/Other/Script/MonstersSpawner.cs"
 "Assets/Other/Script/Player2dBar.cs"
 "Assets/Other/Script/Spawner.cs"
+"Assets/Scripts/AbstractWarrior.cs"
 "Assets/Scripts/EnemyStateMashine/State.cs"
 "Assets/Scripts/EnemyStateMashine/State/AttackState.cs"
 "Assets/Scripts/EnemyStateMashine/State/EnemyPatrolState.cs"

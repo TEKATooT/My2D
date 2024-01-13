@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _respawnsItem;
+    [SerializeField] private ItemForPlayer _respawnsItem;
     [SerializeField] private Transform _respawns;
 
     [SerializeField] private int _respawnsTime;

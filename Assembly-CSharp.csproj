@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\Hiting.cs" />
     <Compile Include="Assets\Other\Script\EntryHouse.cs" />
     <Compile Include="Assets\Scripts\EnemyStateMashine\State.cs" />
+    <Compile Include="Assets\Scripts\AbstractWarrior.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Monster.cs" />
     <Compile Include="Assets\Scripts\EnemyStateMashine\Transitions\TargetDeadTransition.cs" />

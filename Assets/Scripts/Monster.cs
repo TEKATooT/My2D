@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Monster : MonoBehaviour
+public class Monster : AbstractWarrior
 {
     public Player _target;
 
@@ -9,9 +9,5 @@ public class Monster : MonoBehaviour
     public void SetTarget(Player target)
     {
         _target = target;
-    }
-
-    public void TakeDamage(int damage)
-    {
     }
 }

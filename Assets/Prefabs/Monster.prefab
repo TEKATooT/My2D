@@ -289,6 +289,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _transitions:
   - {fileID: -8445196290483871521}
+  _hitRange: 1
+  _monsterFront: {fileID: 3823810659020233148}
+  _target: {fileID: 0}
+  _hitPower: 3
+  _speedAttack: 2
 --- !u!114 &-8445196290483871521
 MonoBehaviour:
   m_ObjectHideFlags: 0

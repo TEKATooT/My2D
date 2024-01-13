@@ -1,7 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
 public class AttackState : State
 {
     [SerializeField] private float _hitRange;
@@ -11,15 +10,6 @@ public class AttackState : State
 
     [SerializeField] private float _speedAttack = 2;
     private float _coolDown;
-
-    private Animator _animator;
-
-    private int _hit = Animator.StringToHash("MonsterAttack");
-
-    private void Awake()
-    {
-        _animator = GetComponent<Animator>();
-    }
  
     private void Update()
     {
