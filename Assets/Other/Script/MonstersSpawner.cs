@@ -6,7 +6,7 @@ public class MonstersSpawner : MonoBehaviour
 {
     [SerializeField] private List<Wave> _waves;
     [SerializeField] private Transform _spawnPoint;
-    [SerializeField] private Player2d _target;
+    [SerializeField] private Player _target;
 
     private Wave _currentWave;
     private int _currentWaveNumber = 0;
