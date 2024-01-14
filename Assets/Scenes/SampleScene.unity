@@ -13684,6 +13684,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1827952345}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: GiveDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &971309184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14832,10 +14844,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -8751257596797934460, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-      propertyPath: _target
-      value: 
-      objectReference: {fileID: 1827952345}
     - target: {fileID: 3054207143031989767, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
       propertyPath: m_Name
       value: Monster
@@ -14884,14 +14892,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4046030393571709079, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-      propertyPath: _target
-      value: 
-      objectReference: {fileID: 1827952345}
-    - target: {fileID: 9014701560857622268, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-      propertyPath: _target
-      value: 
-      objectReference: {fileID: 1827952345}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
 --- !u!1 &1575668460
@@ -15683,10 +15683,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _upSlider:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1827952345}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: GiveHeal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _downSlider:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1827952345}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: GiveDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1827952346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15820,7 +15844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9bc03ab475c33241a34247d69ce87f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _slider: {fileID: 0}
+  _slider: {fileID: 208718452}
   _reactionSlider: 0
 --- !u!61 &1827952349
 BoxCollider2D:
@@ -21267,6 +21291,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0.1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1827952345}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: GiveHeal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2

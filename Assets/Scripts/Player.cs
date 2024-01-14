@@ -6,34 +6,32 @@ public class Player : AbstractWarrior
     [SerializeField] private UnityEvent _upSlider;
     [SerializeField] private UnityEvent _downSlider;
 
-    private float _health = 1;
-    private float _startHealth = 1;
-    private float _heal = .1f;
-    private float _damage = -.1f;
-    private float _zeroHealth = 0;
+    protected float _defaultHealth = 100;
+    protected float _heal = .1f;
+    protected float _damage = .1f;
 
     public void GiveHeal()
     {
-        if (_health < _startHealth)
+        if (_health < _defaultHealth)
         {
             _health += _heal;
 
-            _upSlider.Invoke();
+            _upSlider?.Invoke();
 
-            if (_health > _startHealth)
+            if (_health > _defaultHealth)
             {
-                _health = _startHealth;
+                _health = _defaultHealth;
             }
         }
     }
 
     public void GiveDamage()
     {
-        if (_health > _zeroHealth)
+        if (_health >= _zeroHealth)
         {
-            _health += _damage;
+            _health -= _damage;
 
-            _downSlider.Invoke();
+            _downSlider?.Invoke();
 
             if (_health < _zeroHealth)
             {

@@ -2,10 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AbstractWarrior : MonoBehaviour
+public abstract class AbstractWarrior : MonoBehaviour
 {
-    virtual public void TakeDamage(int damage)
+    protected float _health = 100;
+
+    protected float _zeroHealth = 0;
+
+    public void TakeDamage(int damage)
     {
-        Debug.Log("damagee");
+        if (_health >= _zeroHealth)
+        {
+            _health -= damage;
+
+            if (_health < _zeroHealth)
+            {
+                _health = _zeroHealth;
+            }
+        }
     }
 }
