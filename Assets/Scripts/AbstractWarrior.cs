@@ -4,12 +4,12 @@ using UnityEngine;
 
 public abstract class AbstractWarrior : MonoBehaviour
 {
-    [SerializeField] protected int _health;
+    [SerializeField] protected float _health;
 
     [SerializeField] private BarRenderer _barRenderer;
 
-    private int _startHealth;
-    private int _zeroHealth = 0;
+    private float _startHealth;
+    private float _zeroHealth = 0;
 
     private void Start()
     {
@@ -46,5 +46,12 @@ public abstract class AbstractWarrior : MonoBehaviour
 
             _barRenderer.Draw(_startHealth, _health);
         }
+    }
+
+    public void LiveSteal(Player player, Monster monster, float steelValue)
+    {
+        player._health = Mathf.MoveTowards(player._health, _startHealth, steelValue);
+
+        monster._health = Mathf.MoveTowards(monster._health, _zeroHealth, steelValue);
     }
 }

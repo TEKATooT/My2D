@@ -20,7 +20,7 @@ public class BarRenderer : MonoBehaviour
         BarDrawCorrector();
     }
 
-    public void Draw(int startValue, int newValue)
+    public void Draw(float startValue, float newValue)
     {
         _slider.maxValue = startValue;
         _slider2.maxValue = startValue;

@@ -609,7 +609,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 97
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -15214,6 +15214,26 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1827952345}
+    - target: {fileID: 591496779001073118, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 591496779001073118, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1081211593640281197, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1081211593640281197, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1081211593640281197, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3054207143031989767, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
       propertyPath: m_Name
       value: Monster
@@ -15263,19 +15283,34 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4046030393571709079, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
-      propertyPath: _health
-      value: 110
-      objectReference: {fileID: 0}
-    - target: {fileID: 4046030393571709079, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
       propertyPath: _target
       value: 
       objectReference: {fileID: 1827952345}
+    - target: {fileID: 8225671177790300786, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225671177790300786, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533348654284435165, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533348654284435165, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533348654284435165, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9014701560857622268, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
       propertyPath: _target
       value: 
       objectReference: {fileID: 1827952345}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
 --- !u!1 &1575668460
 GameObject:
@@ -15519,7 +15554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644513204}
   m_Layer: 0
-  m_Name: GunPosition
+  m_Name: FrontPosition
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -16101,6 +16136,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 110
   _barRenderer: {fileID: 965849786}
+  _frontPosition: {fileID: 1644513204}
+  _skillRange: 10
+  _steelValue: 1
+  _self: {fileID: 1827952345}
+  _target: {fileID: 1817685988}
 --- !u!114 &1827952346
 MonoBehaviour:
   m_ObjectHideFlags: 0
