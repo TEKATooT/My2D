@@ -10,16 +10,9 @@ public class BarRenderer : MonoBehaviour
     [SerializeField] private float _reactionSlider2;
 
     [SerializeField] private TextHelthBar _textHelthBar;
-    
-    private float _nowValue;
-    private float _maxValue = 100;
-    private float _minValue = 0;
 
     private void Start()
     {
-        _nowValue = _maxValue;
-
-        _textHelthBar.Draw(_nowValue);
     }
 
     private void Update()
@@ -27,30 +20,15 @@ public class BarRenderer : MonoBehaviour
         BarDrawCorrector();
     }
 
-    public void SliderUp(int value)
+    public void Draw(int startValue, int newValue)
     {
-        if (_nowValue < _maxValue)
-        {
-            _nowValue += value;
+        _slider.maxValue = startValue;
+        _slider2.maxValue = startValue;
 
-            _slider.DOValue(_nowValue, _reactionSlider);
-            _slider2.DOValue(_nowValue, _reactionSlider2);
+        _slider.DOValue(newValue, _reactionSlider);
+        _slider2.DOValue(newValue, _reactionSlider2);
 
-            _textHelthBar.Draw(_nowValue);
-        }
-    }
-
-    public void SliderDown(int value)
-    {
-        if (_nowValue > _minValue)
-        {
-            _nowValue -= value;
-
-            _slider.DOValue(_nowValue, _reactionSlider);
-            _slider2.DOValue(_nowValue, _reactionSlider2);
-
-            _textHelthBar.Draw(_nowValue);
-        }
+        _textHelthBar.Draw(startValue, newValue);
     }
 
     private void BarDrawCorrector()

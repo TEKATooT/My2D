@@ -16099,7 +16099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0546f19645aee4ab6db388b6070a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 90
+  _health: 110
   _barRenderer: {fileID: 965849786}
 --- !u!114 &1827952346
 MonoBehaviour:

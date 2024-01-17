@@ -4,30 +4,32 @@ using UnityEngine;
 
 public abstract class AbstractWarrior : MonoBehaviour
 {
-    [SerializeField] protected float _health;
+    [SerializeField] protected int _health;
 
     [SerializeField] private BarRenderer _barRenderer;
 
-    private float _defaultHealth;
+    private int _startHealth;
     private int _zeroHealth = 0;
 
     private void Start()
     {
-        _defaultHealth = _health;
+        _startHealth = _health;
+
+        _barRenderer.Draw(_startHealth, _health);
     }
 
     public void TakeHeal(int heal)
     {
-        if (_health < _defaultHealth)
+        if (_health < _startHealth)
         {
             _health += heal;
 
-            _barRenderer.SliderUp(heal);
-
-            if (_health > _defaultHealth)
+            if (_health > _startHealth)
             {
-                _health = _defaultHealth;
+                _health = _startHealth;
             }
+
+            _barRenderer.Draw(_startHealth, _health);
         }
     }
 
@@ -37,12 +39,12 @@ public abstract class AbstractWarrior : MonoBehaviour
         {
             _health -= damage;
 
-            _barRenderer.SliderDown(damage);
-
             if (_health < _zeroHealth)
             {
                 _health = _zeroHealth;
             }
+
+            _barRenderer.Draw(_startHealth, _health);
         }
     }
 }

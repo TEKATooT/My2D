@@ -12,8 +12,8 @@ public class TextHelthBar : MonoBehaviour
        text = GetComponent<Text>();
     }
 
-    public void Draw(float helth)
+    public void Draw(int startHelth, int helth)
     {
-        text.text = "100/" + helth;
+        text.text = startHelth + "/" + helth;
     }
 }

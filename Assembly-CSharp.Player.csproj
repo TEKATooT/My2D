@@ -65,13 +65,14 @@
     <Compile Include="Assets\Scripts\EnemyStateMashine\Transition.cs" />
     <Compile Include="Assets\Other\Script\Menu.cs" />
     <Compile Include="Assets\Other\Script\MonstersSpawner.cs" />
+    <Compile Include="Assets\Scripts\TextHelthBar.cs" />
     <Compile Include="Assets\Other\Script\2dPlayer\Player2d.cs" />
     <Compile Include="Assets\Scripts\EnemyStateMashine\Transitions\DistanceTransition.cs" />
     <Compile Include="Assets\Scripts\MonsterFront.cs" />
     <Compile Include="Assets\Scripts\EnemyStateMashine\State\WinerState.cs" />
     <Compile Include="Assets\Other\Script\Player2dBar.cs" />
     <Compile Include="Assets\Other\Script\2dPlayer\Shop.cs" />
-    <Compile Include="Assets\Other\Script\BarRenderer.cs" />
+    <Compile Include="Assets\Scripts\BarRenderer.cs" />
     <Compile Include="Assets\Other\Script\2dPlayer\Weapons\MashineGun.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\EnemyStateMashine\StateMashine.cs" />
