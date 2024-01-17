@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a1873cccf615ea41aa81ece5aa1e751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: 100
   _target: {fileID: 0}
 --- !u!114 &-4475106481433810279
 MonoBehaviour:

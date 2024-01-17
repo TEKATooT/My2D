@@ -6,14 +6,13 @@ using UnityEngine.Events;
 
 public class PlayerMove : MonoBehaviour
 {
+    public UnityAction Hited;
+    
     [SerializeField] private Rigidbody2D _player;
-    [SerializeField] private BarRenderer _barRenderer;
     [SerializeField] private ParticleSystem _glitters;
 
     private Animator _animator;
     private Rigidbody2D _rigidbody2D;
-
-    public UnityAction Hited;
 
     private int _flipRight = 0;
     private int _flipLeft = 160;
@@ -41,11 +40,6 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
         Moving();
-
-        if (_barRenderer.transform.rotation != Quaternion.Euler(0, 0, 0))
-        {
-            _barRenderer.transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
     }
 
     private void Moving()

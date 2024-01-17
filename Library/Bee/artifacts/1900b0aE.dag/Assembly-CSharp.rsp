@@ -380,7 +380,6 @@
 "Assets/Other/Script/AbstractProjectile.cs"
 "Assets/Other/Script/Alarm.cs"
 "Assets/Other/Script/Ball.cs"
-"Assets/Other/Script/BarRenderer.cs"
 "Assets/Other/Script/BlackHole.cs"
 "Assets/Other/Script/Cannonball.cs"
 "Assets/Other/Script/EntryHouse.cs"
@@ -390,6 +389,7 @@
 "Assets/Other/Script/Player2dBar.cs"
 "Assets/Other/Script/Spawner.cs"
 "Assets/Scripts/AbstractWarrior.cs"
+"Assets/Scripts/BarRenderer.cs"
 "Assets/Scripts/EnemyStateMashine/State.cs"
 "Assets/Scripts/EnemyStateMashine/State/AttackState.cs"
 "Assets/Scripts/EnemyStateMashine/State/EnemyPatrolState.cs"
@@ -407,6 +407,7 @@
 "Assets/Scripts/MonsterFront.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/PlayerMove.cs"
+"Assets/Scripts/TextHelthBar.cs"
 -langversion:9.0
 
 /deterministic
