@@ -28,11 +28,6 @@ public class BarRenderer : MonoBehaviour
         _slider2.maxValue = _barRenderObject.Health;
     }
 
-    private void Update()
-    {
-        BarDrawCorrector();
-    }
-
     public void Draw(float newValue)
     {
         _slider.DOValue(newValue, _reactionSlider);
@@ -40,13 +35,5 @@ public class BarRenderer : MonoBehaviour
         _slider2.value = newValue;
 
         _textHelthBar.Draw(_barRenderObject.Health, newValue);
-    }
-
-    public void BarDrawCorrector()
-    {
-        if (transform.rotation != Quaternion.Euler(0, 0, 0))
-        {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
     }
 }
