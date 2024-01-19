@@ -4,15 +4,28 @@ using DG.Tweening;
 
 public class BarRenderer : MonoBehaviour
 {
+    [SerializeField] private AbstractWarrior _barRenderObject;
+
     [SerializeField] private Slider _slider;
     [SerializeField] private Slider _slider2;
     [SerializeField] private float _reactionSlider;
-    [SerializeField] private float _reactionSlider2;
 
     [SerializeField] private TextHelthBar _textHelthBar;
 
+    private void OnEnable()
+    {
+        _barRenderObject.HealthCheched += Draw;
+    }
+
+    private void OnDisable()
+    {
+        _barRenderObject.HealthCheched -= Draw;
+    }
+
     private void Start()
     {
+        _slider.maxValue = _barRenderObject.Health;
+        _slider2.maxValue = _barRenderObject.Health;
     }
 
     private void Update()
@@ -20,18 +33,16 @@ public class BarRenderer : MonoBehaviour
         BarDrawCorrector();
     }
 
-    public void Draw(float startValue, float newValue)
+    public void Draw(float newValue)
     {
-        _slider.maxValue = startValue;
-        _slider2.maxValue = startValue;
-
         _slider.DOValue(newValue, _reactionSlider);
-        _slider2.DOValue(newValue, _reactionSlider2);
 
-        _textHelthBar.Draw(startValue, newValue);
+        _slider2.value = newValue;
+
+        _textHelthBar.Draw(_barRenderObject.Health, newValue);
     }
 
-    private void BarDrawCorrector()
+    public void BarDrawCorrector()
     {
         if (transform.rotation != Quaternion.Euler(0, 0, 0))
         {

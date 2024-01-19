@@ -607,9 +607,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1385593668}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 110
   m_WholeNumbers: 1
-  m_Value: 100
+  m_Value: 110
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -13016,10 +13016,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9bc03ab475c33241a34247d69ce87f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _barRenderObject: {fileID: 1827952345}
   _slider: {fileID: 208718452}
   _slider2: {fileID: 836620563}
-  _reactionSlider: 0
-  _reactionSlider2: 1
+  _reactionSlider: 1
   _textHelthBar: {fileID: 157499809}
 --- !u!1 &966783482
 GameObject:
@@ -13977,12 +13977,12 @@ MonoBehaviour:
       - m_Target: {fileID: 1827952345}
         m_TargetAssemblyTypeName: AbstractWarrior, Assembly-CSharp
         m_MethodName: TakeDamage
-        m_Mode: 3
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 10
-          m_FloatArgument: 0
+          m_FloatArgument: 10
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -15214,6 +15214,10 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1827952345}
+    - target: {fileID: 50809865982726771, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
+      propertyPath: m_Value
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 591496779001073118, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -15286,6 +15290,30 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1827952345}
+    - target: {fileID: 4812688951405751836, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4812688951405751836, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938969003948417899, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938969003948417899, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932791868729623714, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
+      propertyPath: _reactionSlider
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932791868729623714, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
+      propertyPath: _barRenderObject
+      value: 
+      objectReference: {fileID: 1817685988}
     - target: {fileID: 8225671177790300786, guid: 1137e8ffdae4be843a11005c881cbfa9, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -16135,10 +16163,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 110
-  _barRenderer: {fileID: 965849786}
   _frontPosition: {fileID: 1644513204}
+  _timeForSteal: 6
   _skillRange: 10
   _steelValue: 1
+  _liveStealcooldown: 10
   _self: {fileID: 1827952345}
   _target: {fileID: 1817685988}
 --- !u!114 &1827952346
@@ -21777,12 +21806,12 @@ MonoBehaviour:
       - m_Target: {fileID: 1827952345}
         m_TargetAssemblyTypeName: AbstractWarrior, Assembly-CSharp
         m_MethodName: TakeHeal
-        m_Mode: 3
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 10
-          m_FloatArgument: 0
+          m_FloatArgument: 10
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2

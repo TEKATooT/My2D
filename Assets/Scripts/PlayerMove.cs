@@ -24,7 +24,7 @@ public class PlayerMove : MonoBehaviour
     private float _defaultSpeed = 1.0f;
 
     private float _timeWithoutJump;
-    private float _jumpCoolDown = 1;
+    private float _jumpCooldown = 1;
 
     private int _shot = Animator.StringToHash("Shot");
     private int _walk = Animator.StringToHash("Walk");
@@ -55,7 +55,7 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            if (_timeWithoutJump > _jumpCoolDown)
+            if (_timeWithoutJump > _jumpCooldown)
             {
                 _animator.SetTrigger(_jump);
                 _rigidbody2D.AddForce(Vector2.up * _jumpPower);
@@ -66,7 +66,7 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            if (_timeWithoutJump > _jumpCoolDown)
+            if (_timeWithoutJump > _jumpCooldown)
             {
                 transform.rotation = Quaternion.Euler(0, _flipRight, 0);
 
@@ -78,7 +78,7 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            if (_timeWithoutJump > _jumpCoolDown)
+            if (_timeWithoutJump > _jumpCooldown)
             {
                 transform.rotation = Quaternion.Euler(0, _flipLeft, 0);
 
