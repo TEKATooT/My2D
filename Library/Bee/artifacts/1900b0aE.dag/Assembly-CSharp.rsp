@@ -407,6 +407,7 @@
 "Assets/Other/Script/Spawner.cs"
 "Assets/Scripts/AbstractWarrior.cs"
 "Assets/Scripts/BarRenderer.cs"
+"Assets/Scripts/PlayerSkills.cs"
 "Assets/Scripts/TextHelthBar.cs"
 -langversion:9.0
 

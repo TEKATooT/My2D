@@ -95,6 +95,7 @@
     <Compile Include="Assets\Other\Script\Spawner.cs" />
     <Compile Include="Assets\Other\Script\BlackHole.cs" />
     <Compile Include="Assets\Other\Script\2dPlayer\Weapon.cs" />
+    <Compile Include="Assets\Scripts\PlayerSkills.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

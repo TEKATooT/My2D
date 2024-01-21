@@ -14,15 +14,18 @@ public class BarRenderer : MonoBehaviour
 
     private void OnEnable()
     {
-        _healthSlider.maxValue = _barRenderObject.Health;
-        _healthSlider2.maxValue = _barRenderObject.Health;
-
         _barRenderObject.HealthCheched += Draw;
     }
 
     private void OnDisable()
     {
         _barRenderObject.HealthCheched -= Draw;
+    }
+
+    private void Start()
+    {
+        _healthSlider.maxValue = _barRenderObject.Health;
+        _healthSlider2.maxValue = _barRenderObject.Health;
     }
 
     private void Update()
@@ -36,6 +39,6 @@ public class BarRenderer : MonoBehaviour
 
         _healthSlider2.value = newValue;
 
-        _textHelthBar.Draw(_barRenderObject.Health, newValue);
+        _textHelthBar.Draw(_healthSlider.maxValue, newValue);
     }
 }
