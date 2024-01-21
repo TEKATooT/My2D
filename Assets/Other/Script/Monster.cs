@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Monster : AbstractWarrior
 {
-    public Player _target;
+    [SerializeField] private Player _target;
 
     public Player Target => _target;
 

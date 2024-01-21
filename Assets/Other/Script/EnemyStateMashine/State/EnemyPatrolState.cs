@@ -1,8 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
 
-[RequireComponent(typeof(SpriteRenderer))]
-
 public class EnemyPatrolState : State
 {
     [SerializeField] private int patrolLength;
@@ -17,7 +15,7 @@ public class EnemyPatrolState : State
 
     public void Patrolling()
     {
-        float _startPosition = transform.position.x;
+        float _startPosition = transform.localPosition.x;
 
         _startPosition += patrolLength;
 

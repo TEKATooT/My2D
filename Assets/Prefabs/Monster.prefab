@@ -260,12 +260,12 @@ MonoBehaviour:
       - m_Target: {fileID: 4046030393571709079}
         m_TargetAssemblyTypeName: AbstractWarrior, Assembly-CSharp
         m_MethodName: TakeHeal
-        m_Mode: 3
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 10
-          m_FloatArgument: 0
+          m_FloatArgument: 10
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -299,7 +299,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3054207143031989820}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1685989675
 MonoBehaviour:
@@ -573,12 +573,12 @@ MonoBehaviour:
       - m_Target: {fileID: 4046030393571709079}
         m_TargetAssemblyTypeName: AbstractWarrior, Assembly-CSharp
         m_MethodName: TakeDamage
-        m_Mode: 3
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 10
-          m_FloatArgument: 0
+          m_FloatArgument: 10
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -897,7 +897,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 97
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1033,8 +1033,8 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3823810659020233148}
   - {fileID: 3118290295139152156}
+  - {fileID: 3823810659020233148}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1150,7 +1150,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 90
-  _barRenderer: {fileID: 7932791868729623714}
   _target: {fileID: 0}
 --- !u!114 &-4475106481433810279
 MonoBehaviour:
@@ -1195,7 +1194,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetState: {fileID: 8235261277063950309}
   _monsterFront: {fileID: 3823810659020233148}
-  _target: {fileID: 0}
   _seeRange: 5
 --- !u!114 &8235261277063950309
 MonoBehaviour:
@@ -1242,7 +1240,6 @@ MonoBehaviour:
   - {fileID: -8445196290483871521}
   _hitRange: 1
   _monsterFront: {fileID: 3823810659020233148}
-  _target: {fileID: 0}
   _hitPower: 3
   _speedAttack: 2
 --- !u!114 &-8445196290483871521
@@ -1481,7 +1478,7 @@ RectTransform:
   - {fileID: 3857669924831333994}
   - {fileID: 4330529076709307392}
   m_Father: {fileID: 3054207143031989820}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1561,10 +1558,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9bc03ab475c33241a34247d69ce87f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _slider: {fileID: 50809865982726771}
-  _slider2: {fileID: 4879950947892731296}
-  _reactionSlider: 0
-  _reactionSlider2: 1
+  _barRenderObject: {fileID: 4046030393571709079}
+  _healthSlider: {fileID: 50809865982726771}
+  _healthSlider2: {fileID: 4879950947892731296}
+  _reactionSlider: 1
   _textHelthBar: {fileID: 1953902312438148488}
 --- !u!1 &4923370107059310477
 GameObject:

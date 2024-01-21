@@ -3,12 +3,11 @@ using UnityEngine.Events;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Rigidbody2D))]
-
 public class PlayerMove : MonoBehaviour
 {
     public UnityAction Hited;
     
-    [SerializeField] private Rigidbody2D _player;
+    [SerializeField] private Rigidbody2D _playerModel;
     [SerializeField] private ParticleSystem _glitters;
 
     private Animator _animator;
@@ -33,8 +32,8 @@ public class PlayerMove : MonoBehaviour
 
     private void Start()
     {
-        _animator = _player.GetComponent<Animator>();
-        _rigidbody2D = _player.GetComponent<Rigidbody2D>();
+        _animator = _playerModel.GetComponent<Animator>();
+        _rigidbody2D = _playerModel.GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -70,7 +69,7 @@ public class PlayerMove : MonoBehaviour
             {
                 transform.rotation = Quaternion.Euler(0, _flipRight, 0);
 
-                _rigidbody2D.velocity = _player.transform.right * _speed;
+                _rigidbody2D.velocity = _playerModel.transform.right * _speed;
 
                 _animator.SetTrigger(_walk);
             }
@@ -82,7 +81,7 @@ public class PlayerMove : MonoBehaviour
             {
                 transform.rotation = Quaternion.Euler(0, _flipLeft, 0);
 
-                _rigidbody2D.velocity = _player.transform.right * _speed;
+                _rigidbody2D.velocity = _playerModel.transform.right * _speed;
 
                 _animator.SetTrigger(_walk);
             }

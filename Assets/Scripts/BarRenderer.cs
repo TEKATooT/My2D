@@ -14,6 +14,9 @@ public class BarRenderer : MonoBehaviour
 
     private void OnEnable()
     {
+        _healthSlider.maxValue = _barRenderObject.Health;
+        _healthSlider2.maxValue = _barRenderObject.Health;
+
         _barRenderObject.HealthCheched += Draw;
     }
 
@@ -22,10 +25,9 @@ public class BarRenderer : MonoBehaviour
         _barRenderObject.HealthCheched -= Draw;
     }
 
-    private void Start()
+    private void Update()
     {
-        _healthSlider.maxValue = _barRenderObject.Health;
-        _healthSlider2.maxValue = _barRenderObject.Health;
+        transform.position = _barRenderObject.transform.position;
     }
 
     public void Draw(float newValue)

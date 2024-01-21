@@ -7,7 +7,7 @@ public class TextHelthBar : MonoBehaviour
 {
     private Text text;
 
-    private void Start()
+    private void OnEnable()
     {
        text = GetComponent<Text>();
     }

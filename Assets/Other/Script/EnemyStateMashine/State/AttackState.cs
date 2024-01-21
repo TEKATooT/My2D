@@ -5,7 +5,6 @@ public class AttackState : State
 {
     [SerializeField] private float _hitRange;
     [SerializeField] private Transform _monsterFront;
-    [SerializeField] private Player _target;
     [SerializeField] private int _hitPower;
 
     [SerializeField] private float _speedAttack = 2;
@@ -19,9 +18,9 @@ public class AttackState : State
 
         if (hit)
         {
-            if (_coolDown <= 0 && _target.gameObject == hit.collider.gameObject)
+            if (_coolDown <= 0 && Target.gameObject == hit.collider.gameObject)
             {
-                _target.TakeDamage(_hitPower);
+                Target.TakeDamage(_hitPower);
 
                 _animator.Play(_hit);
 

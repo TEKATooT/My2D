@@ -9,7 +9,7 @@ public class Hiting : MonoBehaviour
 
     [SerializeField] private Transform _gunPosition;
 
-    [SerializeField] private Monster _target;
+    [SerializeField] private AbstractWarrior _target;
 
     private void OnEnable()
     {

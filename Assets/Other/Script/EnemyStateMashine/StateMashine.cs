@@ -11,7 +11,7 @@ public class StateMashine : MonoBehaviour
 
     public State Current => _currentState;
 
-    private void Start()
+    private void OnEnable()
     {
         _target = GetComponent<Monster>().Target;
         ResetState(_firstState);

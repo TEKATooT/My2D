@@ -9,7 +9,7 @@ public class Player : AbstractWarrior
     [SerializeField] private float _liveStealcooldown = 10;
 
     [SerializeField] private Player _self;
-    [SerializeField] private Monster _target;
+    [SerializeField] private AbstractWarrior _target;
 
     private float _cooldown = 0;
 

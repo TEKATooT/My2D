@@ -4,7 +4,6 @@ using UnityEngine;
 public class SeeTargetTransiton : Transition
 {
     [SerializeField] private Transform _monsterFront;
-    [SerializeField] private Player _target;
     [SerializeField] private float _seeRange;
 
     private void Update()
@@ -21,7 +20,7 @@ public class SeeTargetTransiton : Transition
 
         if (see)
         {
-            if (_target.gameObject == see.collider.gameObject)
+            if (Target.gameObject == see.collider.gameObject)
             {
                 DOTween.KillAll();
 
