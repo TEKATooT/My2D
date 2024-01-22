@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Hiting : MonoBehaviour
 {
@@ -6,10 +7,7 @@ public class Hiting : MonoBehaviour
     [SerializeField] private int _hitPower;
 
     [SerializeField] private PlayerMove _player;
-
     [SerializeField] private Transform _gunPosition;
-
-    [SerializeField] private AbstractWarrior _target;
 
     private void OnEnable()
     {
@@ -27,9 +25,9 @@ public class Hiting : MonoBehaviour
 
         if (hit)
         {
-            if (_target.gameObject == hit.collider.gameObject)
+            if (hit.collider.TryGetComponent(out AbstractWarrior target))
             {
-                _target.TakeDamage(_hitPower);
+                target.TakeDamage(_hitPower);
             }
         }
     }

@@ -9,8 +9,6 @@ public class Player : AbstractWarrior
     [SerializeField] private float _steelValue;
     [SerializeField] private float _liveStealcooldown = 10;
 
-    [SerializeField] private AbstractWarrior _target;
-
     private float _cooldown = 0;
     private bool _isReady = true;
 
@@ -23,13 +21,13 @@ public class Player : AbstractWarrior
     {
         if (Input.GetKeyDown(KeyCode.F) && _isReady == true)
         {
-            RaycastHit2D target = Physics2D.Raycast(_frontPosition.position, transform.right, _skillRange);
+            RaycastHit2D hit = Physics2D.Raycast(_frontPosition.position, transform.right, _skillRange);
 
-            if (target)
+            if (hit)
             {
-                if (_target.gameObject == target.collider.gameObject)
+                if (hit.collider.TryGetComponent(out AbstractWarrior target))
                 {
-                    StartCoroutine(LiveSteal(this, _target, _steelValue, _timeForSteal));
+                    StartCoroutine(LiveSteal(this, target, _steelValue, _timeForSteal));
 
                     _cooldown = _liveStealcooldown;
                     _isReady = false;
