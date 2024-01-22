@@ -9,7 +9,6 @@ public class Player : AbstractWarrior
     [SerializeField] private float _steelValue;
     [SerializeField] private float _liveStealcooldown = 10;
 
-    [SerializeField] private Player _self;
     [SerializeField] private AbstractWarrior _target;
 
     private float _cooldown = 0;
@@ -30,7 +29,7 @@ public class Player : AbstractWarrior
             {
                 if (_target.gameObject == target.collider.gameObject)
                 {
-                    StartCoroutine(LiveSteal(_self, _target, _steelValue, _timeForSteal));
+                    StartCoroutine(LiveSteal(this, _target, _steelValue, _timeForSteal));
 
                     _cooldown = _liveStealcooldown;
                     _isReady = false;
