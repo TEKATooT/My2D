@@ -15973,7 +15973,6 @@ GameObject:
   - component: {fileID: 1827952351}
   - component: {fileID: 1827952350}
   - component: {fileID: 1827952349}
-  - component: {fileID: 1827952352}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -16240,22 +16239,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 110
---- !u!114 &1827952352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827952321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bb84dc70e841d648ab2abc6bd1e78fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _health: 0
   _frontPosition: {fileID: 1644513204}
   _timeForSteal: 6
-  _skillRange: 15
+  _skillRange: 150
   _steelValue: 5
   _liveStealcooldown: 10
   _self: {fileID: 1827952351}
