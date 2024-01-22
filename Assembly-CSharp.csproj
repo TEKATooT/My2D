@@ -65,7 +65,6 @@
     <Compile Include="Assets\Other\Script\EnemyStateMashine\Transition.cs" />
     <Compile Include="Assets\Other\Script\Menu.cs" />
     <Compile Include="Assets\Other\Script\MonstersSpawner.cs" />
-    <Compile Include="Assets\Scripts\PlayerSkills.cs" />
     <Compile Include="Assets\Scripts\TextHelthBar.cs" />
     <Compile Include="Assets\Other\Script\2dPlayer\Player2d.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\Transitions\DistanceTransition.cs" />
@@ -88,7 +87,7 @@
     <Compile Include="Assets\Other\Script\EntryHouse.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\State.cs" />
     <Compile Include="Assets\Scripts\AbstractWarrior.cs" />
-    <Compile Include="Assets\Other\Script\Player.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Other\Script\Monster.cs" />
     <Compile Include="Assets\Other\Script\EnemyStateMashine\Transitions\TargetDeadTransition.cs" />
     <Compile Include="Assets\Other\Script\Alarm.cs" />

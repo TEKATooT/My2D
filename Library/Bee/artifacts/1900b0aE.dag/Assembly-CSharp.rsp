@@ -401,13 +401,12 @@
 "Assets/Other/Script/Monster.cs"
 "Assets/Other/Script/MonsterFront.cs"
 "Assets/Other/Script/MonstersSpawner.cs"
-"Assets/Other/Script/Player.cs"
 "Assets/Other/Script/Player2dBar.cs"
 "Assets/Other/Script/PlayerMove.cs"
 "Assets/Other/Script/Spawner.cs"
 "Assets/Scripts/AbstractWarrior.cs"
 "Assets/Scripts/BarRenderer.cs"
-"Assets/Scripts/PlayerSkills.cs"
+"Assets/Scripts/Player.cs"
 "Assets/Scripts/TextHelthBar.cs"
 -langversion:9.0
 
