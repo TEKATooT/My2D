@@ -7,7 +7,7 @@ public class Player : AbstractWarrior
     [SerializeField] private int _timeForSteal;
     [SerializeField] private float _skillRange;
     [SerializeField] private float _steelValue;
-    [SerializeField] private float _liveStealcooldown = 10;
+    [SerializeField] private float _liveStealcoooldown = 10;
 
     private float _cooldown = 0;
     private bool _isReady = true;
@@ -29,7 +29,7 @@ public class Player : AbstractWarrior
                 {
                     StartCoroutine(LiveSteal(this, target, _steelValue, _timeForSteal));
 
-                    _cooldown = _liveStealcooldown;
+                    _cooldown = _liveStealcoooldown;
                     _isReady = false;
 
                     StartCoroutine(CooldownTimer());
@@ -40,7 +40,7 @@ public class Player : AbstractWarrior
 
     private IEnumerator CooldownTimer()
     {
-        var waitForSecond = new WaitForSeconds(_liveStealcooldown);
+        var waitForSecond = new WaitForSeconds(_liveStealcoooldown);
 
         yield return waitForSecond;
 
