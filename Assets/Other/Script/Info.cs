@@ -1,11 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
-using TMPro;
-
-[RequireComponent(typeof(TextMeshPro))]
 
 public class Info : MonoBehaviour
 {
